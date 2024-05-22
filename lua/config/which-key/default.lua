@@ -25,11 +25,7 @@ return {
     -- T = { "<cmd>Telescope grep_string<cr>", "Grep String" },
     -- C = { "<cmd>Telescope commands<cr>", "Commands" },
     -- l = { "<cmd>Telescope resume<cr>", "Resume last search" },
-    c = { "<cmd>Telescope git_commits<cr>", "Git commits" },
-    B = { "<cmd>Telescope git_branches<cr>", "Git branches" },
-    m = { "<cmd>Telescope git_status<cr>", "Git status" },
-    S = { "<cmd>Telescope git_stash<cr>", "Git stash" },
-    -- e = { "<cmd>Telescope frecency<cr>", "Frecency" },
+        -- e = { "<cmd>Telescope frecency<cr>", "Frecency" },
     d = {
       name = "+DAP",
       c = { "<cmd>Telescope dap commands<cr>", "Dap Commands" },
@@ -51,5 +47,12 @@ return {
       end,
       "Toggle Codeium",
     } 
+  },
+  g = {
+    name = "+Git",
+    c = { "<cmd>Telescope git_commits<cr>", "Git commits" },
+    b = { "<cmd>Telescope git_branches<cr>", "Git branches" },
+    s = { "<cmd>Telescope git_status<cr>", "Git status" },
+    S = { "<cmd>Telescope git_stash<cr>", "Git stash" },
   }
 }
