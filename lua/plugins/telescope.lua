@@ -13,7 +13,7 @@ return {
     local telescope = require('telescope')
     local actions = require('telescope.actions')
     local icons  = require('config.icons')
-    -- local trouble = require("trouble.sources.telescope")
+    local trouble = require("trouble.sources.telescope")
 
      vim.api.nvim_create_autocmd("FileType", {
         pattern = "TelescopeResults",
@@ -31,10 +31,10 @@ return {
           mappings = {
             i = {
               ["<esc>"] = actions.close,
-              -- ["<C-t>"] = trouble.open,
+              ["<C-t>"] = trouble.open,
             },
 
-            -- n = { ["<C-t>"] = trouble.open },
+            n = { ["<C-t>"] = trouble.open },
           },
           -- path_display = formattedName,
           path_display = {
