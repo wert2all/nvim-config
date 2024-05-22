@@ -1,5 +1,5 @@
 return {
-  mode={"n", "v"},
+  mode = { "n", "v" },
   w = { ":w!<CR>", "Save" },
   q = { ":confirm q<CR>", "Quit" },
 
@@ -11,7 +11,7 @@ return {
     b = { "<cmd>Telescope buffers<cr>", "Buffers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = {
-      function ()
+      function()
         require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
       end,
       "Search Neovim Config",
@@ -25,7 +25,7 @@ return {
     -- T = { "<cmd>Telescope grep_string<cr>", "Grep String" },
     -- C = { "<cmd>Telescope commands<cr>", "Commands" },
     -- l = { "<cmd>Telescope resume<cr>", "Resume last search" },
-        -- e = { "<cmd>Telescope frecency<cr>", "Frecency" },
+    -- e = { "<cmd>Telescope frecency<cr>", "Frecency" },
     d = {
       name = "+DAP",
       c = { "<cmd>Telescope dap commands<cr>", "Dap Commands" },
@@ -37,8 +37,13 @@ return {
   },
   c = {
     name = "+Code",
+    a = { vim.lsp.buf.code_action, "Code Action" },
+    r = { vim.lsp.buf.rename, "Rename all references" },
+    f = { vim.lsp.buf.format, "Format" },
+    i = { require("telescope.builtin").lsp_implementations, "Implementation" },
+    d = { require("telescope.builtin").diagnostics, "Diagnostics" },
     t = {
-      function ()
+      function()
         if vim.g.codeium_enabled == true then
           vim.cmd "CodeiumDisable"
         else
@@ -46,7 +51,7 @@ return {
         end
       end,
       "Toggle Codeium",
-    } 
+    }
   },
   g = {
     name = "+Git",
@@ -60,13 +65,13 @@ return {
           vim.cmd('DiffviewOpen')
         else
           vim.cmd('DiffviewClose')
-    end  
+        end
       end,
 
-      "DiffView"}
+      "DiffView" }
   },
   L = {
     name = "+Logs",
-    n = {"<cmd>Telescope notify<cr>", "Notifications"},
+    n = { "<cmd>Telescope notify<cr>", "Notifications" },
   }
 }
