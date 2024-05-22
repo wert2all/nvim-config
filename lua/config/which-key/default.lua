@@ -54,5 +54,9 @@ return {
     b = { "<cmd>Telescope git_branches<cr>", "Git branches" },
     s = { "<cmd>Telescope git_status<cr>", "Git status" },
     S = { "<cmd>Telescope git_stash<cr>", "Git stash" },
+  },
+  L = {
+    name = "+Logs",
+    n = {"<cmd>Telescope notify<cr>", "Notifications"},
   }
 }
