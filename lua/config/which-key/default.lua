@@ -7,6 +7,8 @@ return {
     f = { "<cmd>Telescope find_files<cr>", "Find File (CWD)" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
     w = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+    
     -------------
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
@@ -21,8 +23,7 @@ return {
     m = { "<cmd>Telescope git_status<cr>", "Git status" },
     S = { "<cmd>Telescope git_stash<cr>", "Git stash" },
     e = { "<cmd>Telescope frecency<cr>", "Frecency" },
-    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-    d = {
+        d = {
       name = "+DAP",
       c = { "<cmd>Telescope dap commands<cr>", "Dap Commands" },
       b = { "<cmd>Telescope dap list_breakpoints<cr>", "Dap Breakpoints" },
@@ -38,7 +39,17 @@ return {
     },
   },
   c = {
-    name="+Code"
+    name = "+Code",
+    t = {
+      function ()
+        if vim.g.codeium_enabled == true then
+          vim.cmd "CodeiumDisable"
+        else
+          vim.cmd "CodeiumEnable"
+        end
+      end,
+      "Toggle Codeium",
+    } 
   }
 
 }
