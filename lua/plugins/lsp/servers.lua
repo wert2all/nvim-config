@@ -1,5 +1,5 @@
 return {
-   jsonls = {
+  jsonls = {
     settings = {
       json = {
         schema = require("schemastore").json.schemas(),

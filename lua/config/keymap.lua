@@ -12,7 +12,7 @@ map("v", "K", ":m '<-2<CR>gv=gv", opts)
 -- Fast saving
 map("n", "<Leader>w", ":write!<CR>", opts)
 map("n", "<Leader>q", ":q!<CR>", opts)
-map({"n", "v"}, "<C-s>", ":write!<CR>", opts)
+map({ "n", "v" }, "<C-s>", ":write!<CR>", opts)
 
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
@@ -94,4 +94,3 @@ map("n", "<Esc>", ":nohlsearch<CR>", opts)
 
 -- ctrl + x to cut full line
 map("n", "<C-x>", "dd", opts)
-

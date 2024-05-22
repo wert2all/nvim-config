@@ -9,10 +9,10 @@ return {
     { "b0o/schemastore.nvim" },
     { "hrsh7th/cmp-nvim-lsp" },
   },
-  config = function ()
+  config = function()
     require("mason").setup({
       ui = {
-        border="rounded",
+        border = "rounded",
         icons = {
           package_installed = "✓",
           package_pending = "➜",
@@ -78,7 +78,7 @@ return {
       end,
     })
 
-     vim.diagnostic.config({
+    vim.diagnostic.config({
       title = false,
       underline = true,
       virtual_text = true,
